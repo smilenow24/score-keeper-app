@@ -1,12 +1,11 @@
 .App {
-  text-align: center;
+  display: grid;
+  gap: 20px;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
+/*
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +34,17 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.PlayerSection {
+  padding: 2em;
+  background-color: #61dafb;
 }
+
+.PlayerFormSection {
+  padding: 2em;
+  background-color: #6c9da9;
+}
+
+
+
