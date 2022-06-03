@@ -20,6 +20,6 @@ export default function PlayerForm({onCreatePlayer}) {
   return (<form className='PlayerForm' onSubmit={handleSubmit}>
     <label htmlFor="name">Name</label>
     <input id="namePlayerNew" name="namePlayerNew" type="text" />
-    <button type="button">New Player</button>
+    <button>New Player</button>
   </form>)
 }
