@@ -1,10 +1,3 @@
-.App {
-  display: grid;
-  gap: 20px;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
 /*
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,15 +28,29 @@
     transform: rotate(360deg);
   }
 } */
-
-.PlayerSection {
-  padding: 2em;
-  background-color: #61dafb;
+.App {
+  display: grid;
+  gap: 20px;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
-.PlayerFormSection {
-  padding: 2em;
-  background-color: #6c9da9;
+body {
+  background-color: #aaeed3c4;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #267c30;
+  padding: 1em;
+  border-radius: 10px;
+  color: azure;
+}
+
+.PlayerList {
+  list-style: none;
+  padding-left: 0;
 }
 
 

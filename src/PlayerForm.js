@@ -18,8 +18,8 @@ export default function PlayerForm({onCreatePlayer}) {
   }
 
   return (<form className='PlayerForm' onSubmit={handleSubmit}>
-    <label htmlFor="name">Name</label>
-    <input id="namePlayerNew" name="namePlayerNew" type="text" />
-    <button>New Player</button>
+    <label htmlFor="name">insert a new name:</label>
+    <input id="namePlayerNew" name="namePlayerNew" type="text" required/>
+    <button className='PlayerNewButton'>New Player</button>
   </form>)
 }
