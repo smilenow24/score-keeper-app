@@ -5,7 +5,9 @@ import Button from './Button.js';
 import Player from './Player.js';
 import PlayerForm from './PlayerForm.js';
 
+
 function App() {
+
   const [playerAll, setPlayerAll] = useState([]);
   console.log(playerAll)
 
@@ -30,13 +32,27 @@ function App() {
     ]);
   }
 
+  function resetScores() {
+    setPlayerAll(
+      playerAll.map((playerSingle) => {
+        return { ...playerSingle, score: 0};
+      }
+      ));
+  }
+
+  function resetAllPlayer() {
+    return setPlayerAll([])
+  }
+
   return (
     <div className="App">
+      
+      <h1>My Score-Keeper-App</h1>
       {/* eslint-disable-next-line */}
-      <ul className="playerList" role="list" >
+      <ul className="PlayerList" role="list" >
 
       {playerAll.map((playerSingle, index) => 
-      (<Player 
+      (<Player
         key={playerSingle.namePlayerNew} 
         name={playerSingle.namePlayerNew} 
         score={playerSingle.score}
@@ -45,8 +61,8 @@ function App() {
         />
       ))}
       </ul>
-      <Button>Reset scores</Button>
-      <Button>New game</Button>
+      <Button onClick={resetScores}>Reset Scores</Button>
+      <Button onClick={resetAllPlayer}>New Game</Button>
       <PlayerForm onCreatePlayer={createPlayer} />
     </div>
   );
