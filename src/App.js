@@ -1,15 +1,18 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Button from './Button.js';
 import Player from './Player.js';
 import PlayerForm from './PlayerForm.js';
+import { getFromLocal, setToLocal } from "./lib/localStorage";
 
 
 function App() {
+  // ?? nullish coalescing operator
+  const [playerAll, setPlayerAll] = useState(getFromLocal("playerSingle") ?? []);
+  useEffect(() => setToLocal("playerSingle", playerAll), [playerAll]);
 
-  const [playerAll, setPlayerAll] = useState([]);
-  console.log(playerAll)
+  //const [playerAll, setPlayerAll] = useState([]);
 
   function createPlayer(playerSingle) {
     setPlayerAll([...playerAll, playerSingle])
