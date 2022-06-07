@@ -1,6 +1,11 @@
+import { useEffect, useState } from 'react';
 import './PlayerForm.css';
 
 export default function PlayerForm({onCreatePlayer}) {
+
+  //const [inputText, setInputText] = useState([]);
+
+  //useEffect(() => setToLocal("InputText", inputText), [inputText]);
 
   function handleSubmit(event) {
 
