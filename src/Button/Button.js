@@ -1,8 +1,8 @@
 //import './Button.css';
 import styled from "styled-components";
 
-export default function Button ({ onClick, children }) {
-  return <AppButton onClick={onClick} className='Button'>{children}</AppButton>;
+export default function Button ({text, onClick, children }) {
+  return <AppButton onClick={onClick} className='Button'>{children} {text}</AppButton>;
 }
 
 const AppButton = styled.button`
